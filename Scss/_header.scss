@@ -1,0 +1,114 @@
+header{
+background: $Dark-Blue-intro-email;
+    .nav{
+        @include flexCenter(row,center,space-between);
+        padding: 2rem 5rem;
+        position: sticky;
+        top: 0;
+        background: $Dark-Blue-intro-email;
+
+    .logo{
+        height: 2rem;
+        width: auto;
+    }
+
+        ul{
+            @include flexCenter(row,center,center);
+            gap: 2rem;
+            list-style-type: none;
+
+            a{
+                text-decoration: none;
+                color: $White;
+                font-size: 0.875rem;
+                font-family: $font-heading;
+                @include transition-ease;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .header-intro{
+        @include flexCenter(column, center, center);
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+        color: $White;
+
+        h1{
+            font-family: $font-heading;
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+
+        p{
+            font-family: $font-body;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+            font-weight: lighter;
+        }
+
+        button{
+            background: none;
+            background-image: linear-gradient( to right, $Cyan-cta, $Blue-cta);
+            padding: 0.625rem 3rem;
+            border: none;
+            border-radius: 1.25rem;
+            color: white;
+            font-family: $font-body;
+            cursor: pointer;
+            @include transition-ease;
+
+            &:hover{
+                background: $Blue-cta;
+            }
+        }
+    }
+}
+
+@include media-sm{
+    header{
+        .nav{
+            padding: 1.25rem;
+
+            .logo{
+                height: 1.5rem;
+            }
+        }
+
+        .header-intro{
+            img{
+                max-width: 100%;
+                height: auto;
+                object-fit: scale-down;
+            }
+
+            h1{
+                line-height: 2rem;
+            }
+
+            p{
+                line-height: 1.3rem;
+            }
+            
+            br{
+                display: none;
+            }
+        }
+    }
+}
+
+@include media-md{
+    header{
+        .header-intro{
+            img{
+                max-width: 100%;
+                height: auto;
+                object-fit: scale-down;
+            }
+        }
+    }
+}

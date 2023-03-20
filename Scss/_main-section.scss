@@ -1,0 +1,290 @@
+main{
+    background: $Dark-Blue-main;
+    @include flexCenter(column,center,center);
+    padding: 3.5rem;
+    gap: 10rem;
+
+
+    .main-section-1{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows: repeat(2,1fr);
+       gap: 3rem;
+
+       div{
+        @include flexCenter(column,center,center);
+        gap: .5rem;
+        text-align: center;
+
+        h3{
+            color: $White;
+            font-family: $font-heading
+        }
+
+        p{
+            color: $White;
+            font-size: 0.875rem;
+            font-family: $font-body;
+        }
+       }
+    }
+
+    .main-section-2{
+        @include flexCenter(row,center,space-between);
+        gap: 3rem;
+
+        div{
+            @include flexCenter(column,flex-start,flex-start);
+            gap: 2rem;
+
+           h2{
+            color: $White;
+            font-family: $font-heading;
+            font-size: 2rem;
+           } 
+
+           p{
+            color: $White;
+            font-family: $font-body;
+            font-size: 0.875rem;
+           }
+
+           a{
+            color: $Cyan-cta;
+            @include flexCenter(row,center,center);
+            font-size: 0.875rem;
+            font-family: $font-body;
+            gap: .3rem;
+            @include transition-ease;
+
+            &:hover{
+                color: $White;
+            }
+           }
+        }
+
+        img{
+            max-width: 100%;
+            height: auto;
+            object-fit: scale-down;
+        }
+    }
+
+    .main-section-3{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+        place-items: center;
+        gap: 3rem;
+
+        div{
+            @include flexCenter(column,flex-start,flex-start);
+            padding: 2rem;
+            gap: 2rem;
+            background: $Dark-Blue-intro-email;
+            border-radius: 0.4375rem;
+            position: relative;
+
+
+            .quotes{
+                position: absolute;
+                top: -2rem;
+                left: -1rem;
+            }
+
+            p{
+                font-size: 0.875rem;
+                color: $White;
+                font-family: $font-body;
+            }
+
+            .details{
+                @include flexCenter(row,flex-start,flex-start);
+                gap: .6rem;
+                padding: 0;
+
+                img{
+                    border-radius: 50%;
+                    height: 32px;
+                    width: auto;
+                }
+
+                h6{
+                    color: $White;
+                    font-family: $font-heading;
+                    @include flexCenter(column,flex-start,flex-start);
+                    gap: .4rem;
+
+                    &::after{
+                        content: "Founder & CEO, Huddle";
+                        color: $White;
+                        font-family: $font-body;
+                        font-size: 8px;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    .main-section-4{
+        @include flexCenter(column,center,center);
+        gap: 1.5rem;
+        padding: 3rem;
+        text-align: center;
+        background: $Dark-Blue-main;
+        box-shadow: 2px 2px 8px 4px $Dark-Blue-intro-email;
+        border-radius: 0.4375rem;
+
+        h2{
+            color: $White;
+            font-size: 2rem;
+            font-family: $font-heading
+        }
+
+        p{
+            color: $White;
+            font-size: 0.875rem;
+            font-family: $font-body;
+        }
+
+        .newsletter{
+            @include flexCenter(row,center,center);
+            gap: 2rem;
+            width: 100%;
+
+            input{
+                border: none;
+                width: 70%;
+                padding: 0.625rem 2rem;
+                border-radius: 1.25rem;
+                color: $Dark-Blue-main;
+
+                &:focus{
+                    border: none;
+                    outline: solid 2px $Cyan-cta;
+                }
+            }
+
+            button{
+            background: none;
+            background-image: linear-gradient( to right, $Cyan-cta, $Blue-cta);
+            padding: 0.625rem;
+            border: none;
+            border-radius: 1.25rem;
+            color: white;
+            font-family: $font-body;
+            cursor: pointer;
+            @include transition-ease;
+
+              &:hover{
+                background: $Blue-cta;
+            }
+            }
+        }
+    }
+}
+
+@include media-sm{
+    main{
+        padding: 2rem;
+        gap: 5rem;
+
+        .main-section-1{
+            grid-template-columns: 1fr;
+
+            div{
+                br{
+                    display: none;
+                }
+            }
+        }
+
+        .main-section-2{
+            @include flexCenter(column,center,center);
+
+            div{
+                @include flexCenter(column,center,center);
+                text-align: center;
+
+                br{
+                    display: none;
+                }
+            }
+        }
+
+                 .main-section-3 {
+                     grid-template-columns: 1fr;
+                     gap: 2rem;
+
+                     div{
+                        br{
+                            display: none;
+                        }
+                     }
+                 }
+
+                 .main-section-4{
+                    br{
+                        display: none
+                    }
+
+                    .newsletter{
+                        @include flexCenter(column,center,center);
+                        gap: 1rem;
+
+                        input{
+                            width: 100%;
+                        }
+
+                        button{
+                            width: 100%;
+                        }
+                    }
+                 }
+    }
+}
+
+@include media-md{
+        main {
+                padding: 2rem;
+                gap: 5rem;
+        
+                .main-section-1 {
+                    grid-template-columns: 1fr;       
+                }
+        
+                .main-section-2 {
+                    @include flexCenter(column, center, center);
+        
+                    div {
+                        @include flexCenter(column, center, center);
+                        text-align: center;
+                    }
+                }
+
+                .main-section-3{
+                    grid-template-columns: 1fr;
+                }
+
+                     .main-section-4{
+                    br{
+                        display: none
+                    }
+
+                    .newsletter{
+                        @include flexCenter(column,center,center);
+                        gap: 1rem;
+
+                        input{
+                            width: 100%;
+                        }
+
+                        button{
+                            width: 100%;
+                        }
+                    }
+                 }
+            }
+}

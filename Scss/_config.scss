@@ -1,0 +1,56 @@
+// Colors 
+// Primary colors
+$Dark-Blue-intro-email : hsl(217, 28%, 15%);
+$Dark-Blue-main : hsl(217, 27%, 13%);
+$Dark-Blue-footer: hsl(216, 53%, 9%);
+$Dark-Blue-testimonials: hsl(219, 30%, 18%);
+
+// Accent colors
+$Cyan-cta: hsl(176, 68%, 64%);
+$Blue-cta: hsl(198, 60%, 50%);
+$Light-Red-error: hsl(0, 100%, 63%);
+
+// Neutral color
+$White : hsl(0, 0%, 100%);
+
+// Typography
+$font-heading: "Raleway", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+// mixins
+
+@mixin flexCenter($direction, $align-items, $justify-content){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin transition-ease{
+    transition: all .3s ease-in-out;
+}
+
+@mixin media-sm{
+    @media(max-width: 475px){
+        @content;
+    }
+}
+
+@mixin media-md{
+    @media(max-width: 920px){
+        @content;
+    }
+}
+
+@mixin media-lg{
+    @media(max-width: 1440px){
+        @content;
+    }
+}
+
+// Resets
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

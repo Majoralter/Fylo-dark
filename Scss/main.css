@@ -1,0 +1,453 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: hsl(217, 28%, 15%);
+}
+header .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  position: sticky;
+  top: 0;
+  background: hsl(217, 28%, 15%);
+}
+header .nav .logo {
+  height: 2rem;
+  width: auto;
+}
+header .nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+header .nav ul a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875rem;
+  font-family: "Raleway", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+header .nav ul a:hover {
+  text-decoration: underline;
+}
+header .header-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+header .header-intro h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+header .header-intro p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
+}
+header .header-intro button {
+  background: none;
+  background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  padding: 0.625rem 3rem;
+  border: none;
+  border-radius: 1.25rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+header .header-intro button:hover {
+  background: hsl(198, 60%, 50%);
+}
+
+@media (max-width: 475px) {
+  header .nav {
+    padding: 1.25rem;
+  }
+  header .nav .logo {
+    height: 1.5rem;
+  }
+  header .header-intro img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+  header .header-intro h1 {
+    line-height: 2rem;
+  }
+  header .header-intro p {
+    line-height: 1.3rem;
+  }
+  header .header-intro br {
+    display: none;
+  }
+}
+@media (max-width: 920px) {
+  header .header-intro img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+}
+main {
+  background: hsl(217, 27%, 13%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem;
+  gap: 10rem;
+}
+main .main-section-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3rem;
+}
+main .main-section-1 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+main .main-section-1 div h3 {
+  color: hsl(0, 0%, 100%);
+  font-family: "Raleway", sans-serif;
+}
+main .main-section-1 div p {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+}
+main .main-section-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+main .main-section-2 div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+main .main-section-2 div h2 {
+  color: hsl(0, 0%, 100%);
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+}
+main .main-section-2 div p {
+  color: hsl(0, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+}
+main .main-section-2 div a {
+  color: hsl(176, 68%, 64%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+  gap: 0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+main .main-section-2 div a:hover {
+  color: hsl(0, 0%, 100%);
+}
+main .main-section-2 img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+main .main-section-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  place-items: center;
+  gap: 3rem;
+}
+main .main-section-3 div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+  background: hsl(217, 28%, 15%);
+  border-radius: 0.4375rem;
+  position: relative;
+}
+main .main-section-3 div .quotes {
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+}
+main .main-section-3 div p {
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+}
+main .main-section-3 div .details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.6rem;
+  padding: 0;
+}
+main .main-section-3 div .details img {
+  border-radius: 50%;
+  height: 32px;
+  width: auto;
+}
+main .main-section-3 div .details h6 {
+  color: hsl(0, 0%, 100%);
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.4rem;
+}
+main .main-section-3 div .details h6::after {
+  content: "Founder & CEO, Huddle";
+  color: hsl(0, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+  font-size: 8px;
+}
+main .main-section-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+  text-align: center;
+  background: hsl(217, 27%, 13%);
+  box-shadow: 2px 2px 8px 4px hsl(217, 28%, 15%);
+  border-radius: 0.4375rem;
+}
+main .main-section-4 h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+main .main-section-4 p {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+}
+main .main-section-4 .newsletter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+main .main-section-4 .newsletter input {
+  border: none;
+  width: 70%;
+  padding: 0.625rem 2rem;
+  border-radius: 1.25rem;
+  color: hsl(217, 27%, 13%);
+}
+main .main-section-4 .newsletter input:focus {
+  border: none;
+  outline: solid 2px hsl(176, 68%, 64%);
+}
+main .main-section-4 .newsletter button {
+  background: none;
+  background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  padding: 0.625rem;
+  border: none;
+  border-radius: 1.25rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+main .main-section-4 .newsletter button:hover {
+  background: hsl(198, 60%, 50%);
+}
+
+@media (max-width: 475px) {
+  main {
+    padding: 2rem;
+    gap: 5rem;
+  }
+  main .main-section-1 {
+    grid-template-columns: 1fr;
+  }
+  main .main-section-1 div br {
+    display: none;
+  }
+  main .main-section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .main-section-2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  main .main-section-2 div br {
+    display: none;
+  }
+  main .main-section-3 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  main .main-section-3 div br {
+    display: none;
+  }
+  main .main-section-4 br {
+    display: none;
+  }
+  main .main-section-4 .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  main .main-section-4 .newsletter input {
+    width: 100%;
+  }
+  main .main-section-4 .newsletter button {
+    width: 100%;
+  }
+}
+@media (max-width: 920px) {
+  main {
+    padding: 2rem;
+    gap: 5rem;
+  }
+  main .main-section-1 {
+    grid-template-columns: 1fr;
+  }
+  main .main-section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .main-section-2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  main .main-section-3 {
+    grid-template-columns: 1fr;
+  }
+  main .main-section-4 br {
+    display: none;
+  }
+  main .main-section-4 .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  main .main-section-4 .newsletter input {
+    width: 100%;
+  }
+  main .main-section-4 .newsletter button {
+    width: 100%;
+  }
+}
+footer {
+  background: hsl(216, 53%, 9%);
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  gap: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+footer .footer-div-1, footer .footer-div-2, footer .footer-div-3, footer .footer-div-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+footer .footer-div-1 a, footer .footer-div-2 a, footer .footer-div-3 a, footer .footer-div-4 a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+}
+footer .footer-div-1 p, footer .footer-div-2 p, footer .footer-div-3 p, footer .footer-div-4 p {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  font-family: "Open Sans", sans-serif;
+}
+footer .footer-div-5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .footer-div-5 img {
+  cursor: pointer;
+}
+
+@media (max-width: 475px) {
+  footer {
+    grid-template-columns: 1fr;
+    place-items: start;
+    padding: 2rem;
+  }
+  footer br {
+    display: none;
+  }
+  footer .footer-div-1 .logo {
+    height: 32px;
+    width: auto;
+  }
+}
+@media (max-width: 920px) {
+  footer {
+    grid-template-columns: 1fr;
+    place-items: start;
+    padding: 2rem;
+  }
+  footer .footer-div-1 .logo {
+    height: 32px;
+    width: auto;
+  }
+}/*# sourceMappingURL=main.css.map */
